@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EasySP</string>
+    <string name="key_bool">bool</string>
+    <string name="key_int">int</string>
+    <string name="key_float">float</string>
+    <string name="key_long">long</string>
+    <string name="key_string">string</string>
+    <string name="key_set">set</string>
+</resources>
