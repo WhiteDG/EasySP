@@ -1,30 +1,28 @@
 # EasySP
-[中文版点我](https://github.com/WhiteDG/EasySP/blob/master/README_ZH.md)
+EasySP是一个简单的Android SharedPreferences工具类。可以使用它简化对SharedPreferences数据的操作，同时它也支持链式调用，可以通过一行代码写入一条或多条数据。
 
-EasySP is a simple sharedpreferences util for android. You can use EasySP to simplify the operation of the SharedPreferences data. EasySP supports chain calls, you can write multiple data by one line of code.  
+## 下载
 
-## Installation
-
-Add the depedency in your build.gradle. The library is distributed via jCenter.
+在项目中的 build.gradle 文件中添加如下引用
 ```
 dependencies {
     compile 'com.white:easysp:1.0.0'
 }
 ```
-## Usage
+## 使用
 
-- save data to sharedpreferences.xml   
+- 保存数据到sharedpreferences   
 ```
 EasySP.init(context).putBoolean("boolean", true);
 
-// you can also use string resource value as the key
+//可以使用字符串资源作为保存的键
 EasySP.init(context).putBoolean(R.string.key_bool, true);
 
-// or specify a custom name for the preferences' name:
+//可以自定义sharedpreferences的文件名
 EasySP.init(context,"Custom").putBoolean("boolean", true);
 ```
 
-- save multiple data by one line of code
+- 一句代码保存多条数据（链式调用）
 ```
 EasySP.init(context)
                 .putBoolean(R.string.key_bool, true)
@@ -36,20 +34,20 @@ EasySP.init(context)
                 .putStringSet(R.string.key_set, strings);
 ```
 
-- read data
+- 读取数据
 ```
 boolean booleanData = EasySP.init(context).getBoolean("bool");
 
 boolean booleanData = EasySP.init(context).getBoolean(R.string.key_bool,defValue);
 ```
 
-- remove data
+- 移除某个键对应的数据
 ```
 EasySP.init(context).remove(bool);
 
 EasySP.init(context).remove(R.string.key_bool);
 ```
-- clear data
+- 清除所有数据
 ```
 EasySP.init(context).clear();
 ```
