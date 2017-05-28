@@ -45,7 +45,7 @@ boolean booleanData = EasySP.init(context).getBoolean(R.string.key_bool,defValue
 
 - remove data
 ```
-EasySP.init(context).remove(bool);
+EasySP.init(context).remove("bool");
 
 EasySP.init(context).remove(R.string.key_bool);
 ```
