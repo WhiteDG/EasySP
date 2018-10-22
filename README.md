@@ -8,7 +8,7 @@ EasySP is a simple sharedpreferences util for android. You can use EasySP to sim
 Add the depedency in your build.gradle. The library is distributed via jCenter.
 ```
 dependencies {
-    compile 'com.white:easysp:1.0.0'
+    implementation 'com.white:easysp:1.0.0'
 }
 ```
 ## Usage

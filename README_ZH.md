@@ -6,7 +6,7 @@ EasySP是一个简单的Android SharedPreferences工具类。可以使用它简�
 在项目中的 build.gradle 文件中添加如下引用
 ```
 dependencies {
-    compile 'com.white:easysp:1.0.0'
+    implementation 'com.white:easysp:1.0.0'
 }
 ```
 ## 使用
