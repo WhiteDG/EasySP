@@ -1,7 +1,7 @@
 # EasySP
 [中文版点我](https://github.com/WhiteDG/EasySP/blob/master/README_ZH.md)
 
-EasySP is a simple sharedpreferences util for android. You can use EasySP to simplify the operation of the SharedPreferences data. EasySP supports chain calls, you can write multiple data by one line of code.  
+EasySP is a lightweight utility for handling SharedPreferences on Android. It simplifies SharedPreferences data operations, offering support for chain calls, enabling you to write multiple data entries with just one line of code.
 
 ## Installation
 
@@ -13,18 +13,18 @@ dependencies {
 ```
 ## Usage
 
-- save data to sharedpreferences.xml   
+- Save data to `sharedpreferences.xml`   
 ```
 EasySP.init(context).putBoolean("boolean", true);
 
-// you can also use string resource value as the key
+// you can also use a string resource value as the key
 EasySP.init(context).putBoolean(R.string.key_bool, true);
 
 // or specify a custom name for the preferences' name:
 EasySP.init(context,"Custom").putBoolean("boolean", true);
 ```
 
-- save multiple data by one line of code
+- Save multiple data with one line of code
 ```
 EasySP.init(context)
                 .putBoolean(R.string.key_bool, true)
@@ -36,20 +36,20 @@ EasySP.init(context)
                 .putStringSet(R.string.key_set, strings);
 ```
 
-- read data
+- Read data
 ```
 boolean booleanData = EasySP.init(context).getBoolean("bool");
 
 boolean booleanData = EasySP.init(context).getBoolean(R.string.key_bool,defValue);
 ```
 
-- remove data
+- Remove data
 ```
 EasySP.init(context).remove("bool");
 
 EasySP.init(context).remove(R.string.key_bool);
 ```
-- clear data
+- Clear data
 ```
 EasySP.init(context).clear();
 ```
